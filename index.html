@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- PRIMARY SEO METATAGS -->
+    <title>Pharmaceutical Testing Lab in Bangladesh | GMP Certified Lab</title>
+    <meta name="description" content="Leading pharmaceutical testing laboratory in Bangladesh. GMP certified services including stability testing, drug quality analysis, and microbiological testing.">
+    <meta name="keywords" content="Pharmaceutical testing lab in Bangladesh, Drug quality testing laboratory, Stability testing lab in Dhaka, GMP certified pharmaceutical lab, Analytical laboratory services Bangladesh">
+    <link rel="canonical" href="https://yourpharmalab-bd.com/">
+
+    <!-- TAILWIND CSS FOR FAST LOADING & RESPONSIVENESS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        :root {
+            --brand-blue: #0A4D92;
+            --brand-dark: #073666;
+            --accent-gray: #F8FAFC;
+            /* Scroll padding to prevent header from covering section titles when jumping to anchors */
+            scroll-padding-top: 80px; 
+        }
+
+        @media (min-width: 768px) {
+            :root {
+                scroll-padding-top: 110px;
+            }
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #334155;
+            overflow-x: hidden;
+        }
+
+        .bg-brand { background-color: var(--brand-blue); }
+        .text-brand { color: var(--brand-blue); }
+        .border-brand { border-color: var(--brand-blue); }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Smooth Mobile Menu */
+        #mobile-menu {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(-10px);
+        }
+        #mobile-menu.active {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+
+        /* Compact Header Styling */
+        header {
+            transition: all 0.3s ease;
+        }
+        
+        header.sticky-nav {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.98);
+        }
+
+        /* Custom Spinner */
+        .loader {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid var(--brand-blue);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        /* Reveal Animation (Scroll-based) */
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* FIXED Accordion State (Click-based) */
+        .faq-item { 
+            transition: all 0.3s ease; 
+            border: 1px solid #e2e8f0;
+        }
+        
+        .faq-answer-container {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.3s ease-out;
+        }
+
+        .faq-item.open {
+            border-color: var(--brand-blue);
+            background-color: #fff;
+            box-shadow: 0 4px 20px -5px rgba(10, 77, 146, 0.1);
+        }
+
+        .faq-item.open .faq-answer-container {
+            grid-template-rows: 1fr;
+        }
+
+        .faq-answer-inner {
+            overflow: hidden;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .faq-item.open .faq-icon {
+            transform: rotate(180deg);
+            color: var(--brand-blue);
+        }
+        
+        .faq-toggle:hover .faq-question-text {
+            color: var(--brand-blue);
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- TOP BAR CONTACT INFO -->
+    <div class="hidden md:block bg-brand py-1.5 text-white text-[11px] font-semibold">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex space-x-6">
+                <span><i class="fas fa-phone-alt mr-2"></i> +880 2-12345678</span>
+                <span><i class="fas fa-envelope mr-2"></i> info@pharmatest-bd.com</span>
+                <span><i class="fas fa-map-marker-alt mr-2"></i> Tejgaon, Dhaka-1208</span>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-blue-200 transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="hover:text-blue-200 transition-colors"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-blue-200 transition-colors"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <header id="main-header" class="fixed w-full top-0 md:relative z-50 bg-white border-b border-gray-100">
+        <nav class="container mx-auto px-4 md:px-6 py-2.5 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <div class="w-8 h-8 md:w-9 md:h-9 bg-brand rounded flex items-center justify-center">
+                    <i class="fas fa-microscope text-white text-lg"></i>
+                </div>
+                <span class="text-lg md:text-xl font-bold text-brand tracking-tight">PharmaTest <span class="text-gray-400 font-light">BD</span></span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex space-x-7 items-center text-xs font-bold text-slate-700 uppercase tracking-wide">
+                <a href="#about" class="hover:text-brand transition-colors">About</a>
+                <a href="#services" class="hover:text-brand transition-colors">Services</a>
+                <a href="#faq" class="hover:text-brand transition-colors">FAQs</a>
+                <a href="#contact" class="bg-brand text-white px-5 py-2 rounded-full hover:bg-blue-800 transition-all shadow-md">Get a Quote</a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button class="lg:hidden text-xl text-slate-800 p-2" id="menu-btn" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="lg:hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-xl overflow-hidden">
+            <div class="flex flex-col p-6 space-y-4">
+                <a href="#about" class="mobile-link text-base font-semibold text-slate-800 py-2 border-b border-slate-50">About Us</a>
+                <a href="#services" class="mobile-link text-base font-semibold text-slate-800 py-2 border-b border-slate-50">Services</a>
+                <a href="#faq" class="mobile-link text-base font-semibold text-slate-800 py-2 border-b border-slate-50">FAQs</a>
+                <a href="#contact" class="mobile-link text-base font-bold text-brand py-2">Get a Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-28 pb-16 md:pt-16 md:pb-28 bg-slate-50 overflow-hidden">
+        <div class="hidden lg:block absolute top-0 right-0 w-1/3 h-full bg-blue-100/50 -skew-x-12 translate-x-1/2"></div>
+        
+        <div class="container mx-auto px-4 md:px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="w-full lg:w-3/5 text-center lg:text-left">
+                    <span class="inline-block px-4 py-1.5 bg-blue-100 text-brand text-[10px] font-bold rounded-full mb-6 uppercase tracking-widest italic">Accredited & Certified Lab</span>
+                    <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+                        Pharmaceutical Testing Laboratory in <span class="text-brand">Bangladesh</span>
+                    </h1>
+                    <p class="text-base md:text-xl text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed italic">
+                        PharmaTest BD provides world-class analytical laboratory services, ensuring drug quality and stability for Bangladesh's thriving pharmaceutical industry.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center lg:justify-start font-bold">
+                        <a href="#services" class="bg-brand text-white px-8 py-3.5 rounded-xl hover:bg-blue-800 transition-all shadow-lg flex items-center justify-center">
+                            Testing Services <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                        <a href="#contact" class="bg-white text-brand border-2 border-brand px-8 py-3.5 rounded-xl hover:bg-blue-50 transition-all flex items-center justify-center">
+                            Contact Experts
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full lg:w-2/5 relative mt-8 lg:mt-0">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl transform lg:rotate-2">
+                        <img src="https://images.unsplash.com/photo-1579154273821-3df793836a05?q=80&w=1200&auto=format&fit=crop" 
+                             alt="Advanced Pharmaceutical Laboratory Facility in Dhaka Bangladesh" 
+                             class="w-full h-[280px] md:h-[400px] object-cover">
+                    </div>
+                    <div class="absolute -bottom-4 -left-4 md:-bottom-8 md:-left-8 bg-white p-4 md:p-6 rounded-2xl shadow-xl flex items-center space-x-4 border border-gray-100">
+                        <div class="text-brand font-bold text-2xl md:text-4xl italic">GMP</div>
+                        <div class="text-[10px] md:text-xs text-slate-500 uppercase font-bold tracking-tighter italic">Certified<br>Organization</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST LOGOS -->
+    <section class="py-10 bg-white border-y border-gray-100 overflow-hidden">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-wrap justify-center items-center gap-6 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+                <div class="flex items-center space-x-2"><i class="fas fa-award text-xl"></i> <span class="font-bold text-sm italic">ISO 17025</span></div>
+                <div class="flex items-center space-x-2"><i class="fas fa-vial text-xl"></i> <span class="font-bold text-sm italic">GMP CERTIFIED</span></div>
+                <div class="flex items-center space-x-2"><i class="fas fa-check-circle text-xl"></i> <span class="font-bold text-sm italic">DGDA APPROVED</span></div>
+                <div class="flex items-center space-x-2"><i class="fas fa-globe text-xl"></i> <span class="font-bold text-sm italic">WHO STANDARDS</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-16 md:py-28 reveal">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+                <div class="w-full lg:w-1/2 grid grid-cols-2 gap-3 md:gap-6">
+                    <div class="space-y-3 md:space-y-6">
+                        <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?q=80&w=600&auto=format&fit=crop" class="rounded-2xl shadow-lg w-full h-40 md:h-64 object-cover" alt="Lab Research Bangladesh">
+                        <img src="https://images.unsplash.com/photo-1532187875605-1ef6c237bb1e?q=80&w=600&auto=format&fit=crop" class="rounded-2xl shadow-lg w-full h-32 md:h-52 object-cover" alt="Drug Quality Analysis">
+                    </div>
+                    <div class="pt-6 md:pt-12 space-y-3 md:space-y-6">
+                        <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?q=80&w=600&auto=format&fit=crop" class="rounded-2xl shadow-lg w-full h-40 md:h-64 object-cover" alt="Pharmaceutical Testing">
+                        <div class="bg-brand p-6 md:p-10 rounded-2xl text-white shadow-xl flex flex-col justify-center">
+                            <span class="text-3xl md:text-5xl font-bold italic">15+</span>
+                            <p class="text-[10px] md:text-xs opacity-80 uppercase tracking-widest mt-2 font-bold italic">Years of Scientific Excellence</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-6 leading-tight italic border-l-4 border-brand pl-4">Expert Drug Quality Testing Lab Services</h2>
+                    <p class="text-slate-600 mb-6 leading-relaxed text-sm md:text-base italic">
+                        Established with a mission to support the pharmaceutical boom in Bangladesh, our laboratory is a premier destination for high-end analytical testing. We pride ourselves on our commitment to <strong>Good Manufacturing Practice (GMP)</strong> and ISO standards.
+                    </p>
+                    <p class="text-slate-600 mb-8 leading-relaxed text-sm md:text-base italic">
+                        Our facility in Dhaka is equipped with cutting-edge technology to handle complex chemical and microbiological assays. Whether you are a local manufacturer or an international firm seeking regulatory compliance, we provide data integrity and scientific precision you can trust.
+                    </p>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <li class="flex items-center text-slate-700 font-semibold text-sm italic"><i class="fas fa-check-circle text-brand mr-2"></i> DGDA Accredited</li>
+                        <li class="flex items-center text-slate-700 font-semibold text-sm italic"><i class="fas fa-check-circle text-brand mr-2"></i> Data Integrity Focus</li>
+                        <li class="flex items-center text-slate-700 font-semibold text-sm italic"><i class="fas fa-check-circle text-brand mr-2"></i> PhD Researchers</li>
+                        <li class="flex items-center text-slate-700 font-semibold text-sm italic"><i class="fas fa-check-circle text-brand mr-2"></i> ICH Compliant</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-16 md:py-28 bg-slate-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 italic">Laboratory Testing Services</h2>
+                <div class="w-20 h-1.5 bg-brand mx-auto rounded-full"></div>
+                <p class="mt-6 text-slate-600 max-w-2xl mx-auto text-sm md:text-base italic leading-relaxed">Reliable, precise, and high-quality testing solutions for the pharmaceutical sector.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <div class="service-card bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col h-full reveal">
+                    <div class="w-12 h-12 bg-blue-50 text-brand rounded-xl flex items-center justify-center mb-6 text-xl shadow-inner">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-4 text-slate-900 italic uppercase tracking-tight">Drug Quality Testing</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed flex-grow italic">
+                        Rigorous analysis for API, Excipients, and Finished Products. We specialize in identification and purity testing ensuring every batch meets pharmacopeial standards (USP, BP, EP).
+                    </p>
+                </div>
+                <div class="service-card bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col h-full reveal">
+                    <div class="w-12 h-12 bg-blue-50 text-brand rounded-xl flex items-center justify-center mb-6 text-xl shadow-inner">
+                        <i class="fas fa-hourglass-half"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-4 text-slate-900 italic uppercase tracking-tight">Stability Testing</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed flex-grow italic">
+                        ICH-compliant environmental chambers for all climatic zones. We conduct accelerated and long-term studies to determine product shelf-life and degradation profiles.
+                    </p>
+                </div>
+                <div class="service-card bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col h-full reveal">
+                    <div class="w-12 h-12 bg-blue-50 text-brand rounded-xl flex items-center justify-center mb-6 text-xl shadow-inner">
+                        <i class="fas fa-bacteria"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-4 text-slate-900 italic uppercase tracking-tight">Microbiological Analysis</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed flex-grow italic">
+                        Ensuring sterile integrity through microbial limit testing (MLT), sterility testing, and bacterial endotoxin testing (BET) using validated international methods.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-16 md:py-28 bg-white">
+        <div class="container mx-auto px-4 md:px-6 max-w-3xl">
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 italic">Frequently Asked Questions</h2>
+                <div class="w-16 h-1 bg-brand mx-auto rounded-full"></div>
+                <p class="mt-4 text-slate-500 italic">Find answers to common questions about our laboratory services.</p>
+            </div>
+
+            <div class="space-y-3">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item rounded-xl bg-slate-50 overflow-hidden reveal">
+                    <button class="faq-toggle w-full flex items-center justify-between p-5 text-left outline-none cursor-pointer">
+                        <span class="faq-question-text font-bold text-slate-800 text-sm md:text-base transition-colors italic">Are you DGDA (Bangladesh) and GMP certified?</span>
+                        <i class="fas fa-chevron-down faq-icon text-slate-400 text-xs"></i>
+                    </button>
+                    <div class="faq-answer-container">
+                        <div class="faq-answer-inner">
+                            <div class="px-5 pb-5">
+                                <p class="text-slate-600 text-xs md:text-sm leading-relaxed italic">
+                                    Yes, PharmaTest BD is fully accredited by the Directorate General of Drug Administration (DGDA) of Bangladesh. Our facility strictly adheres to Good Manufacturing Practice (GMP) and ISO/IEC 17025:2017 standards.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item rounded-xl bg-slate-50 overflow-hidden reveal">
+                    <button class="faq-toggle w-full flex items-center justify-between p-5 text-left outline-none cursor-pointer">
+                        <span class="faq-question-text font-bold text-slate-800 text-sm md:text-base transition-colors italic">What is the typical turnaround time (TAT) for a report?</span>
+                        <i class="fas fa-chevron-down faq-icon text-slate-400 text-xs"></i>
+                    </button>
+                    <div class="faq-answer-container">
+                        <div class="faq-answer-inner">
+                            <div class="px-5 pb-5">
+                                <p class="text-slate-600 text-xs md:text-sm leading-relaxed italic">
+                                    For standard drug assay and quality testing, the typical TAT is 5 to 7 business days. Complex stability studies follow specific pull-point intervals as per ICH guidelines.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-16 md:py-28 bg-slate-900 text-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col lg:flex-row gap-16">
+                <div class="w-full lg:w-1/2 reveal">
+                    <h2 class="text-3xl md:text-5xl font-extrabold mb-8 leading-tight italic">Ready for <span class="text-blue-400">Quality Excellence?</span></h2>
+                    <p class="text-slate-400 mb-10 text-lg leading-relaxed italic">Partner with the leading pharmaceutical testing laboratory in Bangladesh. Send us your inquiry and our team will respond within 24 hours.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-5">
+                            <div class="w-10 h-10 rounded-lg bg-blue-900/40 flex-shrink-0 flex items-center justify-center text-blue-400 border border-blue-800/50">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-slate-500 uppercase font-extrabold tracking-widest mb-1 italic">Our Headquarters</p>
+                                <p class="font-semibold text-base italic leading-relaxed">Plot 45, Road 12, Industrial Area, Tejgaon, Dhaka-1208, Bangladesh</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-5">
+                            <div class="w-10 h-10 rounded-lg bg-blue-900/40 flex-shrink-0 flex items-center justify-center text-blue-400 border border-blue-800/50">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-slate-500 uppercase font-extrabold tracking-widest mb-1 italic">Call Our Office</p>
+                                <p class="font-semibold text-base italic">+880 2-12345678</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-5">
+                            <div class="w-10 h-10 rounded-lg bg-blue-900/40 flex-shrink-0 flex items-center justify-center text-blue-400 border border-blue-800/50">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-slate-500 uppercase font-extrabold tracking-widest mb-1 italic">General Inquiries</p>
+                                <p class="font-semibold text-base italic">info@pharmatest-bd.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/2 reveal">
+                    <div class="bg-white rounded-[2rem] p-6 md:p-10 text-slate-900 shadow-2xl relative">
+                        <!-- Form Loading Overlay -->
+                        <div id="form-loading" class="hidden absolute inset-0 bg-white/90 rounded-[2rem] z-10 flex flex-col items-center justify-center p-6 text-center">
+                            <div class="loader mb-4 scale-150"></div>
+                            <p class="font-bold text-brand animate-pulse italic">Submitting Inquiry...</p>
+                        </div>
+                        
+                        <!-- Form Success Message -->
+                        <div id="form-success" class="hidden text-center py-10">
+                            <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-slate-900 italic">Inquiry Received Successfully!</h3>
+                            <p class="text-slate-500 mb-4 text-sm italic">Thank you for reaching out. Our technical team has been notified and will contact you via email shortly.</p>
+                            <button onclick="resetForm()" class="mt-4 bg-slate-100 text-slate-700 font-bold py-2 px-6 rounded-lg hover:bg-slate-200 transition-all italic text-xs">Send Another Message</button>
+                        </div>
+
+                        <!-- Inquiry Form -->
+                        <form id="quote-form" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="flex flex-col">
+                                    <label class="text-[10px] font-bold uppercase text-slate-400 mb-1 ml-1 italic tracking-wider">Full Name</label>
+                                    <input type="text" name="fullName" placeholder="John Doe" class="bg-slate-50 border border-slate-200 p-3.5 rounded-xl focus:ring-2 focus:ring-brand focus:border-transparent outline-none transition-all text-sm italic" required>
+                                </div>
+                                <div class="flex flex-col">
+                                    <label class="text-[10px] font-bold uppercase text-slate-400 mb-1 ml-1 italic tracking-wider">Company</label>
+                                    <input type="text" name="companyName" placeholder="Pharma Ltd." class="bg-slate-50 border border-slate-200 p-3.5 rounded-xl focus:ring-2 focus:ring-brand focus:border-transparent outline-none transition-all text-sm italic" required>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="text-[10px] font-bold uppercase text-slate-400 mb-1 ml-1 italic tracking-wider">Work Email</label>
+                                <input type="email" name="email" placeholder="john@pharma.com" class="bg-slate-50 border border-slate-200 p-3.5 rounded-xl focus:ring-2 focus:ring-brand focus:border-transparent outline-none transition-all text-sm italic" required>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="text-[10px] font-bold uppercase text-slate-400 mb-1 ml-1 italic tracking-wider">Testing Service</label>
+                                <select name="service" class="bg-slate-50 border border-slate-200 p-3.5 rounded-xl focus:ring-2 focus:ring-brand outline-none transition-all text-sm appearance-none italic">
+                                    <option>Stability Testing</option>
+                                    <option>Drug Quality Assay</option>
+                                    <option>Microbiological Testing</option>
+                                    <option>Method Validation</option>
+                                </select>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="text-[10px] font-bold uppercase text-slate-400 mb-1 ml-1 italic tracking-wider">Message</label>
+                                <textarea name="message" rows="3" placeholder="Describe your testing needs..." class="bg-slate-50 border border-slate-200 p-3.5 rounded-xl focus:ring-2 focus:ring-brand outline-none transition-all text-sm italic"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-brand text-white font-bold py-3.5 rounded-xl hover:bg-blue-800 transition-all shadow-lg flex items-center justify-center space-x-2 italic text-sm">
+                                <span>Send Inquiry</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPACT FOOTER -->
+    <footer class="bg-slate-950 py-12 text-slate-400 border-t border-slate-900">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
+                <!-- Branding Column -->
+                <div class="text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start space-x-2 mb-4">
+                        <div class="w-7 h-7 bg-brand rounded flex items-center justify-center text-white text-xs"><i class="fas fa-microscope"></i></div>
+                        <span class="text-xl font-bold text-white italic tracking-tight">PharmaTest <span class="text-slate-600">BD</span></span>
+                    </div>
+                    <p class="text-xs max-w-xs italic opacity-80 mx-auto md:mx-0">
+                        Providing internationally recognized analytical laboratory services in Bangladesh. Committed to GMP and scientific precision.
+                    </p>
+                </div>
+
+                <!-- Social Icons & Legal Only -->
+                <div class="flex flex-col items-center md:items-end space-y-4">
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-9 h-9 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-white text-sm hover:bg-brand transition-all duration-300" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-white text-sm hover:bg-brand transition-all duration-300" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-white text-sm hover:bg-brand transition-all duration-300" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div class="flex space-x-6 text-[10px] italic opacity-60">
+                        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                        <a href="#" class="hover:text-white transition-colors">Quality Assurance</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10 pt-8 border-t border-slate-900 text-center text-[10px]">
+                <p class="italic opacity-60">&copy; 2026 PharmaTest Solutions Bangladesh. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        // REPLACE THIS URL with your actual Google Apps Script Web App URL
+        const scriptURL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+
+        const form = document.getElementById('quote-form');
+        const loading = document.getElementById('form-loading');
+        const success = document.getElementById('form-success');
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const header = document.getElementById('main-header');
+
+        // FAQ Interaction Logic (Using 'open' class to avoid scroll animation conflict)
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const faqItem = button.closest('.faq-item');
+                const isOpen = faqItem.classList.contains('open');
+                
+                // Close all other FAQ items for a clean accordion effect
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('open');
+                });
+
+                if (!isOpen) {
+                    faqItem.classList.add('open');
+                }
+            });
+        });
+
+        // Form Submission Logic
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            
+            if (scriptURL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
+                alert("Please configure your Google Apps Script URL in the script code.");
+                return;
+            }
+
+            loading.classList.remove('hidden');
+
+            fetch(scriptURL, { 
+                method: 'POST', 
+                body: new FormData(form),
+                mode: 'no-cors' 
+            })
+            .then(() => {
+                loading.classList.add('hidden');
+                form.classList.add('hidden');
+                success.classList.remove('hidden');
+                form.reset();
+            })
+            .catch(error => {
+                loading.classList.add('hidden');
+                alert('Connection error. Please try again later.');
+                console.error('Error!', error.message);
+            });
+        });
+
+        function resetForm() {
+            success.classList.add('hidden');
+            form.classList.remove('hidden');
+        }
+
+        // Header Scroll Interaction & Dynamic Positioning
+        window.addEventListener('scroll', () => {
+            if(window.scrollY > 20) {
+                header.classList.add('sticky-nav');
+                if(window.innerWidth >= 768) {
+                    header.classList.add('md:fixed');
+                }
+            } else {
+                header.classList.remove('sticky-nav');
+                if(window.innerWidth >= 768) {
+                    header.classList.remove('md:fixed');
+                }
+            }
+        });
+
+        // Mobile Menu Logic
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                menuBtn.querySelector('i').className = 'fas fa-bars';
+            });
+        });
+
+        // Scroll Reveal Animation Logic
+        const reveals = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+            reveals.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    el.classList.add('active');
+                }
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        window.onload = revealOnScroll;
+    </script>
+</body>
+</html>
